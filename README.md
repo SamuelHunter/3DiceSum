@@ -12,14 +12,17 @@ The plane x + y + z = k, where x, y, z are the individual dice rolls and k is th
 Ω = {{1, 2, 3, 4, 5, 6} x {1, 2, 3, 4, 5, 6} x {1, 2, 3, 4, 5, 6}}, represented by a 3D lattice of points.
 
 - The three axes represent the rolls the dice, each lattice point being an event
-- The sums are color coded, with the similarly colored points lining up in planes parallel to x + y + z = k.
-- The slider for k offsets the plane to a new sum k.
+- The sums are color coded, with the similarly colored points lining up in planes parallel to x + y + z = k
+- The slider for k offsets the plane to a new sum k
 - The number of intersections (stars) directly determines the probability of the sum.\
 (P = intersections / 6^3 since all lattice points are equally likely)
 - The plane cross sections form triangles for k ≤ 8 and k ≥ 13; hexagons in between
-- Surprisingly, k = 8 has *less* intersections than k = 10 or k = 11.
+- The most intersections occur on the planes where k = 10 or k = 11
 
-For a more detailed explanation, see below...
+This spaghetti code was written to illustrate the problem, not as an example of good coding practices.\
+Feel free to run the program and view the plot from plenty of angles to understand why the cross section takes on different shapes for different values of k.
+
+*For a more detailed explanation, see below...*
 
 ![](https://github.com/SamuelHunter/3DiceSum/blob/master/k_range_anim.gif)
 
@@ -34,7 +37,7 @@ However, a geometric argument would be that the line
 x + y = 7
 
 intersects the sample space Ω = {{1, 2, 3, 4, 5, 6} x {1, 2, 3, 4, 5, 6}}\
-at the most lattice points (6 out of 36, where each is equally likely for fair dice).
+at the most lattice points (6 out of 6^2, where each is equally likely for fair dice).
 
 ![](https://github.com/SamuelHunter/3DiceSum/blob/master/2_dice_sample_space.PNG)\
 [Image credit: Professor Hanbaek Lyu](https://ccle.ucla.edu/pluginfile.php/2659609/mod_resource/content/0/lecturenote1.pdf)
